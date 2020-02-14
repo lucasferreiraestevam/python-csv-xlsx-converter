@@ -10,6 +10,7 @@ for file in files:
 		wb = Workbook()
 		ws = wb.active
 		with open('CSV/'+file) as csv_file:
+			print('Processing File : '+root)
 			csv_reader = csv.reader(csv_file, delimiter=',')
 			for row in csv_reader:
 		    		ws.append(row)
